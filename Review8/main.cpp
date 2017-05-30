@@ -11,7 +11,7 @@
  1. Test the initial program
  2. Change the program to get data from the user (cin)
  3. change the program to get 10 numbers from the user (hint: use a loop)
- 4. Sort the array (ascending order)
+ 4. Sort the array in ascending order (hint: use bubble sort https://www.youtube.com/watch?v=8Kp-8OGwphY)
  
  */
 

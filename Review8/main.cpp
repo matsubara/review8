@@ -17,25 +17,42 @@
 
 #include <iostream>
 
+void sortAscending(int *a, int *b) {
+    if (*a > *b){
+        int c;
+        c = *b;
+        *b = *a;
+        *a = c;
+    }
+}
+
 int main(int argc, const char * argv[]) {
-    int numbers[3];
-    int a;
-    int b;
-    int c;
-    std::cout<<"Give me a value:";
-    std::cin>> a;
-    std::cout<< "Give me a second value:";
-    std::cin>> b;
-    std::cout<< "Give me a 3rd value:";
-    std::cin>> c;
-    numbers[0] = a;
-    numbers[1] = b;
-    numbers[2] = c;
+    int numbers[5];
+
+    // initialize array with zeros
+    // doing it from the end just for fun
+    for(int i = 4; i >= 0 ; i--){
+        numbers[i] = 0;
+    }
     
+    // get array values from user
+    for(int i = 0; i < 5 ; i++){
+        std::cout << "Give me a value:";
+        std::cin >> numbers[i];
+    }
+
+    // sort using bubblesort
+    for (int y = 4; y > 0 ; y--){
+        for (int i = 0; i < y ; i++) {
+            sortAscending(&numbers[i], &numbers[i+1]);
+        }
+    }
+
     
-    std::cout << numbers[0];
-    std::cout << numbers[1];
-    std::cout << numbers[2];
+    // get array values from user
+    for(int i = 0; i < 5 ; i++){
+        std::cout << "numbers[" << i << "]=" << numbers[i] << "\n";
+    }
     
     return 0;
 }

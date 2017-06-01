@@ -19,10 +19,19 @@
 
 int main(int argc, const char * argv[]) {
     int numbers[3];
+    int a;
+    int b;
+    int c;
+    std::cout<<"Give me a value:";
+    std::cin>> a;
+    std::cout<< "Give me a second value:";
+    std::cin>> b;
+    std::cout<< "Give me a 3rd value:";
+    std::cin>> c;
+    numbers[0] = a;
+    numbers[1] = b;
+    numbers[2] = c;
     
-    numbers[0] = 1;
-    numbers[1] = 15;
-    numbers[2] = 3;
     
     std::cout << numbers[0];
     std::cout << numbers[1];
